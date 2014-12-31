@@ -1,0 +1,21 @@
+{
+  "name": "root-theme",
+  "homepage": "https://github.com/jaceju/root-theme",
+  "version": "0.1.0",
+  "authors": [
+    "Jace Ju <jaceju@gmail.com>"
+  ],
+  "description": "A basic theme for hologram",
+  "keywords": [
+    "hologram",
+    "theme"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
