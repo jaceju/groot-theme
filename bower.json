@@ -1,11 +1,11 @@
 {
-  "name": "root-theme",
-  "homepage": "https://github.com/jaceju/root-theme",
-  "version": "0.1.0",
+  "name": "groot",
+  "homepage": "https://github.com/jaceju/groot-theme",
+  "version": "0.0.1",
   "authors": [
     "Jace Ju <jaceju@gmail.com>"
   ],
-  "description": "A basic theme for hologram",
+  "description": "Groot is a basic theme for hologram",
   "keywords": [
     "hologram",
     "theme"
