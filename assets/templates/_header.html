@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>UI Patterns: <%= title %></title>
+    <title>UI Patterns<%= (title === "") ? '' : ': ' + title %></title>
     <% if @config['css_include'].to_s.strip.length != 0 %>
     <% @config['css_include'].each do |css| %>
     <link rel="stylesheet" href="<%= css %>">
@@ -12,13 +12,20 @@
   </head>
 
   <body>
-
     <nav class="doc-navbar">
-      <a class="doc-brand" href="#">UI Patterns</a>
+      <span class="doc-brand">UI Patterns</span>
       <ul class="doc-nav">
-        <li><a href="./index.html">HOME</a></li>
+        <% if title === "" %>
+        <li class="active"><a href="./index.html">Home</a></li>
+        <% else %>
+        <li><a href="./index.html">Home</a></li>
+        <% end %>
         <% @categories.sort.each do |category, file_name| %>
+        <% if title.downcase === category.downcase %>
+        <li class="active"><a href="<%= file_name %>"><%= category %></a></li>
+        <% else %>
         <li><a href="<%= file_name %>"><%= category %></a></li>
+        <% end %>
         <% end %>
       </ul>
     </nav>
