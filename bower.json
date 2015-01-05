@@ -21,5 +21,8 @@
     ".editorconfig",
     ".gitignore",
     "node_modules"
-  ]
+  ],
+  "dependencies": {
+    "Stickyfill": "~1.1.1"
+  }
 }
