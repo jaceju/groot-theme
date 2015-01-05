@@ -8,8 +8,8 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var $ = require('gulp-load-plugins')();
 
-// Helpers
-function sassc(name, source, dest) {
+// Helper: SASS
+function sassHelper(name, source, dest) {
     return gulp.src(source)
         .pipe($.rubySass({
             style: 'compressed',
@@ -23,31 +23,35 @@ function sassc(name, source, dest) {
         .pipe($.size({ title: name }));
 }
 
-// Styles
-gulp.task('styles', function() {
-    return sassc('styles', 'assets/styles/*.sass', 'dev/build/css');
-});
-
-// Custom
-gulp.task('custom', function() {
-    return sassc('custom', 'example/styles/*.scss', 'dev/custom/css');
-});
-
-// JS
-gulp.task('scripts', function() {
+// Helper: Script
+function scriptHelper(dest) {
     return gulp.src([
               './bower_components/Stickyfill/dist/stickyfill.min.js',
               './assets/scripts/main.js'
             ])
-          .pipe($.concat('main.js'))
+          .pipe($.concat('docs.js'))
           .pipe($.uglify())
-          .pipe(gulp.dest('dev/build/js'))
-          .pipe(gulp.dest('build/js'));
+          .pipe(gulp.dest(dest));
+}
+
+// Styles
+gulp.task('styles', function() {
+    return sassHelper('styles', 'assets/styles/*.sass', 'dev/build/css');
+});
+
+// Custom
+gulp.task('custom', function() {
+    return sassHelper('custom', 'example/styles/*.scss', 'dev/custom/css');
+});
+
+// JS
+gulp.task('scripts', function() {
+    return scriptHelper('dev/build/js');
 });
 
 // Clean
 gulp.task('clean', function(cb) {
-    del(['dev', 'build'], cb);
+    del(['dev', 'build', '*.html'], cb);
 });
 
 /////// DEVELOPMENT ///////
@@ -75,6 +79,7 @@ gulp.task('hologram', function() {
 // Watch
 gulp.task('watch', ['prepare'], function() {
     gulp.start('serve');
+    gulp.watch('hologram.yml', ['hologram']);
     gulp.watch('assets/templates/*.html', ['hologram']);
     gulp.watch('assets/styles/*.sass', ['styles', 'hologram']);
     gulp.watch('example/styles/*.scss', ['custom', 'hologram']);
@@ -90,12 +95,17 @@ gulp.task('templates', function() {
 });
 
 
-// Styles
-gulp.task('build', function() {
-    return sassc('styles', 'assets/styles/*.sass', 'build/css');
+// Build styles
+gulp.task('build:css', function() {
+    return sassHelper('styles', 'assets/styles/*.sass', 'build/css');
+});
+
+// Build scripts
+gulp.task('build:js', function() {
+    return scriptHelper('build/js');
 });
 
 // Build
 gulp.task('default', function(cb) {
-    runSequence('clean', ['build', 'templates'], cb);
+    runSequence('clean', ['build:css', 'build:js', 'templates'], cb);
 });
