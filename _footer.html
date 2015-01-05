@@ -9,6 +9,11 @@
       </div>
     </div>
 
+  <% if @config['js_include'].to_s.strip.length != 0 %>
+    <% @config['js_include'].each do |js| %>
+    <script src="<%= js %>"></script>
+    <% end %>
+  <% end %>
   </body>
 
 </html>

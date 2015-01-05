@@ -5,6 +5,11 @@
     <title>UI Patterns: <%= title %></title>
     <link rel="stylesheet" href="./css/docs.css">
     <link rel="stylesheet" href="./css/github.css">
+    <% if @config['css_include'].to_s.strip.length != 0 %>
+    <% @config['css_include'].each do |css| %>
+    <link rel="stylesheet" href="<%= css %>">
+    <% end %>
+    <% end %>
   </head>
 
   <body>
