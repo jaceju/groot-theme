@@ -1,5 +1,5 @@
 .sass-cache
 .bundle
-public
+build/*.html
 node_modules
 bower_components
