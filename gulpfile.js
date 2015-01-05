@@ -18,7 +18,7 @@ gulp.task('templates', function() {
 
 // Styles
 gulp.task('styles', function() {
-    return gulp.src(['assets/styles/*.sass'])
+    return gulp.src('assets/styles/*.sass')
         .pipe($.rubySass({
             style: 'compressed',
             precision: 10
@@ -31,6 +31,13 @@ gulp.task('styles', function() {
         .pipe($.size({ title: 'styles' }));
 });
 
+// Custom
+gulp.task('custom', function() {
+    return gulp.src('assets/custom/css/*.css')
+        .pipe(gulp.dest('build/css'))
+        .pipe($.size({ title: 'custom' }));
+});
+
 // Clean
 gulp.task('clean', function(cb) {
     del('build', cb);
@@ -40,7 +47,7 @@ gulp.task('clean', function(cb) {
 
 // Prepare for development
 gulp.task('prepare', function (cb) {
-    runSequence('clean', ['templates', 'styles'], cb);
+    runSequence('clean', ['templates', 'styles', 'custom'], cb);
 });
 
 // Start Web Server
