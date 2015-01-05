@@ -1,32 +1,32 @@
-$category-height: 4rem
+$category-height: 5rem
 $content-padding: 1rem
-$side-width: 20rem
+$side-width: 25rem
 
 .doc-container
+  position: relative
+  display: block
 
   & > .doc-content
     position: relative
     float: left
     overflow: hidden
     width: 100%
-    padding: $category-height $side-width $content-padding $content-padding * 2
+    padding: 0 $side-width + 1rem $content-padding $content-padding * 2
     margin-right: -$side-width
-    // background: #0ff
 
-    & > h1:first-child
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: $category-height
-      margin: 0
-      padding: 1.2rem
-      background: #ccc
+    & > h1
+      font-size: 2rem
+      color: #666
+      margin: 4rem auto 2rem
+
+    & > p
+      margin: 2rem 0 !important
+      color: #666
 
   & > .doc-sidebar
     position: relative
     float: left
     overflow: hidden
     width: $side-width
-    padding: $category-height + $content-padding $content-padding $content-padding $content-padding
-    // background: #f0f
+    min-height: 100%
+    padding: $content-padding

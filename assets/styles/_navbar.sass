@@ -1,22 +1,44 @@
 $nav-height: 5rem
 
+@mixin pointer
+  $pointer-size: 10px
+  $pointer-color: #fff
+  content: ""
+  position: absolute
+  bottom: 0
+  left: 50%
+  width: 0
+  height: 0
+  margin-left: -$pointer-size
+  border-left: $pointer-size solid transparent
+  border-right: $pointer-size solid transparent
+  border-bottom: $pointer-size solid $pointer-color
+
 .doc-navbar
   height: $nav-height
   padding-left: 1rem
   background: #333
 
   a
+    position: relative
     display: block
     height: $nav-height
     line-height: $nav-height
     color: #fff
+
+    &:hover
+      text-decoration: none
+
+      &:after
+        +pointer
 
   .doc-brand,
   .doc-nav
     display: inline-block
 
   .doc-brand
-    font-size: 1.5rem
+    color: #fff
+    font-size: 2rem
 
   .doc-nav
     margin: 0
@@ -28,3 +50,5 @@ $nav-height: 5rem
       display: inline-block
       margin-left: 2rem
 
+      &.active > a:after
+        +pointer
