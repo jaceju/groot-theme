@@ -1,5 +1,4 @@
 .sass-cache
 .bundle
-build/*.html
-node_modules
-bower_components
+/dev
+/node_modules
