@@ -7,13 +7,12 @@ var gulp = require('gulp');
 var del = require('del');
 var runSequence = require('run-sequence');
 var $ = require('gulp-load-plugins')();
-var styleDestPath = 'css';
 
 // Templates
 gulp.task('templates', function() {
     return gulp.src('assets/templates/*.jade')
         .pipe($.jade({ pretty: true }))
-        .pipe(gulp.dest('public'))
+        .pipe(gulp.dest('build'))
         .pipe($.size({ title: 'templates' }));
 });
 
@@ -28,26 +27,25 @@ gulp.task('styles', function() {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest(styleDestPath))
+        .pipe(gulp.dest('build/css'))
         .pipe($.size({ title: 'styles' }));
 });
 
 // Clean
 gulp.task('clean', function(cb) {
-    del(['public', 'css'], cb);
+    del('build', cb);
 });
 
 /////// DEVELOPMENT ///////
 
 // Prepare for development
 gulp.task('prepare', function (cb) {
-    styleDestPath = 'public/css';
     runSequence('clean', ['templates', 'styles'], cb);
 });
 
 // Start Web Server
 gulp.task('serve', function() {
-    gulp.src('public')
+    gulp.src('build')
         .pipe($.webserver({
             livereload: true,
             open: true
@@ -65,6 +63,5 @@ gulp.task('watch', ['prepare'], function() {
 
 // Build
 gulp.task('default', function(cb) {
-    styleDestPath = 'css';
     runSequence('clean', 'styles', cb);
 });
