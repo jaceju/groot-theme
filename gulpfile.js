@@ -33,6 +33,18 @@ gulp.task('custom', function() {
     return sassc('custom', 'example/styles/*.scss', 'dev/custom/css');
 });
 
+// JS
+gulp.task('scripts', function() {
+    return gulp.src([
+              './bower_components/Stickyfill/dist/stickyfill.min.js',
+              './assets/scripts/main.js'
+            ])
+          .pipe($.concat('main.js'))
+          .pipe($.uglify())
+          .pipe(gulp.dest('dev/build/js'))
+          .pipe(gulp.dest('build/js'));
+});
+
 // Clean
 gulp.task('clean', function(cb) {
     del(['dev', 'build'], cb);
@@ -42,7 +54,7 @@ gulp.task('clean', function(cb) {
 
 // Prepare for development
 gulp.task('prepare', function (cb) {
-    runSequence('clean', 'styles', 'custom', 'hologram', cb);
+    runSequence('clean', 'styles', 'scripts', 'custom', 'hologram', cb);
 });
 
 // Start Web Server
