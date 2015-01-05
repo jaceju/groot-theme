@@ -81,6 +81,7 @@ gulp.task('watch', ['prepare'], function() {
     gulp.start('serve');
     gulp.watch('hologram.yml', ['hologram']);
     gulp.watch('assets/templates/*.html', ['hologram']);
+    gulp.watch('assets/scripts/*.js', ['scripts', 'hologram']);
     gulp.watch('assets/styles/*.sass', ['styles', 'hologram']);
     gulp.watch('example/styles/*.scss', ['custom', 'hologram']);
 });
