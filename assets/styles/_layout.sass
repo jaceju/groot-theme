@@ -2,9 +2,15 @@ $category-height: 5rem
 $content-padding: 1rem
 $side-width: 25rem
 
+.doc-navbar
+  position: fixed
+  width: 100%
+  z-index: 99
+
 .doc-container
   position: relative
   display: block
+  padding-top: $category-height
 
   & > .doc-content
     position: relative
@@ -17,7 +23,7 @@ $side-width: 25rem
     & > h1
       font-size: 2rem
       color: #666
-      margin: 4rem auto 2rem
+      margin: 2rem auto
 
     & > p
       margin: 2rem 0 !important
