@@ -13,7 +13,13 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    ".sass-cache",
     "assets",
+    "bower.json",
+    "README.md",
+    "package.json",
+    ".editorconfig",
+    ".gitignore",
     "node_modules"
   ]
 }
