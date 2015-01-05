@@ -1,0 +1,19 @@
+      </div>
+
+      <div class="doc-sidebar">
+        <ul class="doc-sidenav">
+          <% @blocks.each do |b| %>
+          <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+  <% if @config['js_include'].to_s.strip.length != 0 %>
+    <% @config['js_include'].each do |js| %>
+    <script src="<%= js %>"></script>
+    <% end %>
+  <% end %>
+  </body>
+
+</html>

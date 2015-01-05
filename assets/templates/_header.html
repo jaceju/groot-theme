@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>UI Patterns: <%= title %></title>
+    <% if @config['css_include'].to_s.strip.length != 0 %>
+    <% @config['css_include'].each do |css| %>
+    <link rel="stylesheet" href="<%= css %>">
+    <% end %>
+    <% end %>
+    <link rel="stylesheet" href="./build/css/docs.css">
+  </head>
+
+  <body>
+
+    <nav class="doc-navbar">
+      <a class="doc-brand" href="#">UI Patterns</a>
+      <ul class="doc-nav">
+        <li><a href="./index.html">HOME</a></li>
+        <% @categories.sort.each do |category, file_name| %>
+        <li><a href="<%= file_name %>"><%= category %></a></li>
+        <% end %>
+      </ul>
+    </nav>
+
+    <div class="doc-container">
+
+      <div class="doc-content">
