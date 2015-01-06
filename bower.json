@@ -1,7 +1,7 @@
 {
   "name": "groot-theme",
   "homepage": "https://github.com/jaceju/groot-theme",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "authors": [
     "Jace Ju <jaceju@gmail.com>"
   ],
@@ -10,20 +10,23 @@
     "hologram",
     "theme"
   ],
-  "license": "MIT",
   "ignore": [
     "**/.*",
     ".sass-cache",
     "assets",
-    "bower.json",
     "README.md",
     "package.json",
     ".editorconfig",
     ".gitignore",
-    "node_modules"
+    "node_modules",
+    "Gemfile",
+    "Gemfile.lock",
+    "example",
+    "hologram.yml",
+    "gulpfile.js"
   ],
-  "dependencies": {},
   "devDependencies": {
     "jquery-sticky": "~1.0.1"
-  }
+  },
+  "license": "MIT"
 }
