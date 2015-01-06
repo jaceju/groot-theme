@@ -10,12 +10,13 @@ $side-width: 25rem
 .doc-container
   position: relative
   display: block
+  overflow: hidden
   padding-top: $category-height
+  background-color: #fff
 
   & > .doc-content
     position: relative
     float: left
-    overflow: hidden
     width: 100%
     padding: 0 $side-width + 1rem $content-padding $content-padding * 2
     margin-right: -$side-width
@@ -32,10 +33,13 @@ $side-width: 25rem
   & > .doc-sidebar
     position: relative
     float: left
-    overflow: hidden
     width: $side-width
     min-height: 100%
     padding: $content-padding
 
     .doc-sidenav
-      width: $side-width - 5rem
+      width: $side-width - 3rem
+
+  & > .doc-footer
+    position: relative
+    clear: both
