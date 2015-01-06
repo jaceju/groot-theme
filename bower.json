@@ -1,7 +1,7 @@
 {
   "name": "groot-theme",
   "homepage": "https://github.com/jaceju/groot-theme",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "authors": [
     "Jace Ju <jaceju@gmail.com>"
   ],
@@ -22,7 +22,8 @@
     ".gitignore",
     "node_modules"
   ],
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "jquery-sticky": "~1.0.1"
   }
 }
