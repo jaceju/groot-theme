@@ -17,6 +17,7 @@ documentation_assets: ./assets/templates
 # document. May also include additional folders as needed.
 dependencies:
   - ./example/css
+  - ./example/js
 
 # Mark which category should be the index page
 # Alternatively, you may have an index.md in the documentation assets
@@ -29,6 +30,6 @@ css_include:
   - './custom/css/main.css'
 
 # List all js to include for the styleguide render examples (path from styleguide directory)
-# js_include:
-#   - './js/vendor.js'
-#   - './js/app.js'
+js_include:
+  - './js/vendor.js'
+  - './js/app.js'
