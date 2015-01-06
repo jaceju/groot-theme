@@ -23,6 +23,6 @@
     "node_modules"
   ],
   "dependencies": {
-    "Stickyfill": "~1.1.1"
+    "jquery-sticky": "~1.0.1"
   }
 }

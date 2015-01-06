@@ -26,7 +26,8 @@ function sassHelper(name, source, dest) {
 // Helper: Script
 function scriptHelper(dest) {
     return gulp.src([
-              './bower_components/Stickyfill/dist/stickyfill.min.js',
+              './bower_components/jquery/dist/jquery.js',
+              './bower_components/jquery-sticky/jquery.sticky.js',
               './assets/scripts/main.js'
             ])
           .pipe($.concat('docs.js'))
