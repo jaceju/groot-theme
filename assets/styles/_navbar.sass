@@ -17,7 +17,9 @@ $nav-height: 50px
 .doc-navbar
   height: $nav-height
   padding-left: 10px
+  font-family: 'Noto Sans', sans-serif
   background: #333
+  border-left: 10px solid #393
 
   a
     position: relative
@@ -33,22 +35,23 @@ $nav-height: 50px
         +pointer
 
   .doc-brand,
-  .doc-nav
+  .doc-search-form
     display: inline-block
 
   .doc-brand
     color: #fff
     font-size: 20px
+    line-height: 50px
 
-  .doc-nav
-    margin: 0
-    padding: 0
-    list-style: none
-    font-size: 12px
+  .doc-search-form
+    height: $nav-height
 
-    li
-      display: inline-block
-      margin-left: 20px
-
-      &.active > a:after
-        +pointer
+    .doc-search-keyword
+      width: $nav-height * 5
+      height: $nav-height / 2
+      margin: $nav-height / 4
+      padding: 3px
+      border-radius: $nav-height / 4
+      color: #fff
+      border: none
+      background: #666

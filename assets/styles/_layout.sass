@@ -1,24 +1,40 @@
+$nav-height: 50px
 $category-height: 50px
 $content-padding: 10px
 $side-width: 250px
 
 .doc-navbar
-  position: fixed
   width: 100%
-  z-index: 99
+  height: $nav-height
+
+  .doc-brand
+    float: left
+
+  .doc-search-form
+    float: right
+    height: $nav-height
 
 .doc-container
   position: relative
   display: block
   overflow: hidden
-  padding-top: $category-height
   background-color: #fff
+  border-left: 10px solid #eee
+
+  & > .doc-sidebar
+    position: relative
+    float: left
+    width: $side-width
+    min-height: 100%
+
+    .doc-sidebar-nav
+      width: $side-width - ($content-padding * 3)
 
   & > .doc-content
     position: relative
     float: left
     width: 100%
-    padding: 0 $side-width + 10px $content-padding $content-padding * 2
+    padding: 0 $side-width + $content-padding $content-padding $content-padding
     margin-right: -$side-width
 
     & > h1
@@ -27,18 +43,8 @@ $side-width: 250px
       margin: 20px auto
 
     & > p
-      margin: 20px 0 !important
+      margin: $content-padding * 2 0 !important
       color: #666
-
-  & > .doc-sidebar
-    position: relative
-    float: left
-    width: $side-width
-    min-height: 100%
-    padding: $content-padding
-
-    .doc-sidenav
-      width: $side-width - 30px
 
   & > .doc-footer
     position: relative

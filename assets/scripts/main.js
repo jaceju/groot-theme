@@ -1,8 +1,8 @@
 (function() {
     $.noConflict();
     jQuery(function($) {
-        $(".doc-sidenav").sticky({
-            topSpacing: '6rem'
+        $(".doc-sidebar-nav").sticky({
+            topSpacing: '0'
         });
     });
 })();
