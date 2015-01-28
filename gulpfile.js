@@ -28,6 +28,7 @@ function scriptHelper(dest) {
     return gulp.src([
               './bower_components/jquery/dist/jquery.js',
               './bower_components/jquery-sticky/jquery.sticky.js',
+              './bower_components/jquery-scrollspy-thesmart/scrollspy.js',
               './assets/scripts/main.js'
             ])
           .pipe($.concat('docs.js'))
