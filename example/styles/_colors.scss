@@ -7,7 +7,32 @@ category: "Basics"
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta arcu enim, ac commodo erat malesuada quis. Pellentesque ultricies tristique justo id efficitur.
 
+Vivamus scelerisque elit eget vestibulum faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla ac mattis velit. Fusce massa nunc, consectetur id vulputate cursus, fringilla nec magna. Sed porttitor, dui sit amet feugiat mattis, lacus turpis efficitur urna, ac elementum nisi enim et ante. Proin diam neque, vehicula nec nisl sit amet, sagittis dignissim orci. Donec tincidunt consectetur arcu et consequat. Mauris lectus dui, faucibus sed nibh in, mattis ullamcorper augue. Duis porta turpis elit, nec accumsan arcu placerat nec. Praesent efficitur dictum magna, ac mollis ipsum tempus eget. Nulla ac ligula placerat, pharetra velit in, vestibulum leo.
+
 ```html_example
-<button class="btn btn-primary">Buttons</button>
+<div class="block red">Block</div>
+<div class="block green">Block</div>
+<div class="block blue">Block</div>
 ```
 */
+.block {
+  display: inline-block;
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  line-height: 100px;
+  text-align: center;
+}
+
+.red {
+  background: #933;
+}
+
+.green {
+  background: #393;
+}
+
+.blue {
+  background: #339;
+}

@@ -8,6 +8,20 @@ category: "JavaScript"
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta arcu enim, ac commodo erat malesuada quis. Pellentesque ultricies tristique justo id efficitur.
 
 ```html_example
-<button class="btn btn-primary">Buttons</button>
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button>
+</p>
+<div style="" aria-expanded="true" class="collapse in" id="collapseExample">
+  <div class="well">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
 ```
+
+Nam quis tristique enim. Phasellus sit amet cursus massa. Nullam molestie, dolor vitae pharetra eleifend, leo nulla feugiat ex, vitae bibendum neque leo non lacus. Morbi bibendum dolor sit amet aliquet elementum. Donec sit amet dui vitae quam auctor vulputate ac at urna. In vel urna et lacus pellentesque vehicula id vitae mi. Sed ornare bibendum bibendum. Pellentesque tincidunt tincidunt sagittis. Ut in ipsum malesuada, cursus elit sit amet, pellentesque lectus.
 */

@@ -8,6 +8,29 @@ category: "Components"
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta arcu enim, ac commodo erat malesuada quis. Pellentesque ultricies tristique justo id efficitur.
 
 ```html_example
-<button class="btn btn-primary">Buttons</button>
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Default</button>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link</button>
 ```
+Nam quis tristique enim. Phasellus sit amet cursus massa. Nullam molestie, dolor vitae pharetra eleifend, leo nulla feugiat ex, vitae bibendum neque leo non lacus. Morbi bibendum dolor sit amet aliquet elementum. Donec sit amet dui vitae quam auctor vulputate ac at urna. In vel urna et lacus pellentesque vehicula id vitae mi. Sed ornare bibendum bibendum. Pellentesque tincidunt tincidunt sagittis. Ut in ipsum malesuada, cursus elit sit amet, pellentesque lectus.
+
+Donec tempor lorem tellus. Donec vitae justo tincidunt, maximus nibh ut, ullamcorper lectus. Maecenas pellentesque sem lacus. Donec at rhoncus lectus. In ullamcorper vestibulum nibh, vitae euismod sem volutpat ut. Duis ut condimentum magna. Integer eget pharetra orci. Aenean efficitur sapien sit amet nibh commodo, sit amet hendrerit magna feugiat. Ut a scelerisque magna. Sed at odio viverra, tempus erat eu, lobortis ex. Vestibulum fringilla faucibus nunc, id vulputate turpis efficitur eu.
+
 */

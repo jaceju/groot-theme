@@ -7,7 +7,17 @@ category: "Components"
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta arcu enim, ac commodo erat malesuada quis. Pellentesque ultricies tristique justo id efficitur.
 
+Nam quis tristique enim. Phasellus sit amet cursus massa. Nullam molestie, dolor vitae pharetra eleifend, leo nulla feugiat ex, vitae bibendum neque leo non lacus. Morbi bibendum dolor sit amet aliquet elementum. Donec sit amet dui vitae quam auctor vulputate ac at urna. In vel urna et lacus pellentesque vehicula id vitae mi. Sed ornare bibendum bibendum. Pellentesque tincidunt tincidunt sagittis. Ut in ipsum malesuada, cursus elit sit amet, pellentesque lectus.
+
+Donec tempor lorem tellus. Donec vitae justo tincidunt, maximus nibh ut, ullamcorper lectus. Maecenas pellentesque sem lacus. Donec at rhoncus lectus. In ullamcorper vestibulum nibh, vitae euismod sem volutpat ut. Duis ut condimentum magna. Integer eget pharetra orci. Aenean efficitur sapien sit amet nibh commodo, sit amet hendrerit magna feugiat. Ut a scelerisque magna. Sed at odio viverra, tempus erat eu, lobortis ex. Vestibulum fringilla faucibus nunc, id vulputate turpis efficitur eu.
+
 ```html_example
-<button class="btn btn-primary">Buttons</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
 ```
 */
