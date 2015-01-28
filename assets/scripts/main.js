@@ -7,5 +7,17 @@
         $sidebarNav.sticky({
             topSpacing: 0
         });
+
+        $('.doc-search-form').on('submit', function (e) {
+            e.preventDefault();
+        });
+
+        $('.doc-search-keyword').autocomplete({
+            lookup: searchData,
+            onSelect: function (suggestion) {
+                $(this).val('');
+                location.href = suggestion.url;
+            }
+        });
     });
 })();

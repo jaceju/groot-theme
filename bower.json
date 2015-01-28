@@ -26,6 +26,8 @@
     "gulpfile.js"
   ],
   "devDependencies": {
+    "jquery-sticky": "~1.0.0",
+    "devbridge-autocomplete": "~1.2.16"
   },
   "license": "MIT"
 }

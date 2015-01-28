@@ -7,6 +7,24 @@
 
     </div>
 
+    <script>
+      var searchData = [
+        <% @pages.each do |file_name, page| %>
+          <% if not page[:blocks].empty? %>
+            <% page[:blocks].each do |block| %>
+              <% file_path = block[:categories][0].to_s.gsub(' ', '_').downcase + '.html' %>
+              <% file_id = "#"+block[:name].to_s %>
+              <%= "{" %>
+              <%= "\"data\": \""+block[:title].to_s+"\"," %>
+              <%= "\"value\": \""+block[:categories][0].to_s+" > "+block[:title]+"\"," %>
+              <%= "\"url\": \""+file_path+file_id+"\"" %>
+              <%= "}," %>
+            <% end %>
+          <% end %>
+        <% end %>
+      ];
+    </script>
+
     <script src="./build/js/docs.js"></script>
     <% if @config['js_include'].to_s.strip.length != 0 %>
     <% @config['js_include'].each do |js| %>

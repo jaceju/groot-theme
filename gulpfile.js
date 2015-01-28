@@ -28,6 +28,7 @@ function scriptHelper(name, dest) {
     return gulp.src([
               './bower_components/jquery/dist/jquery.js',
               './bower_components/jquery-sticky/jquery.sticky.js',
+              './bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js',
               './assets/scripts/main.js'
             ])
           .pipe($.concat('docs.js'))
