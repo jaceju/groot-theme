@@ -24,7 +24,7 @@ function sassHelper(name, source, dest) {
 }
 
 // Helper: Script
-function scriptHelper(dest) {
+function scriptHelper(name, dest) {
     return gulp.src([
               './bower_components/jquery/dist/jquery.js',
               './bower_components/jquery-sticky/jquery.sticky.js',
@@ -33,7 +33,8 @@ function scriptHelper(dest) {
             ])
           .pipe($.concat('docs.js'))
           .pipe($.uglify())
-          .pipe(gulp.dest(dest));
+          .pipe(gulp.dest(dest))
+          .pipe($.size({ title: name }));
 }
 
 // Styles
@@ -48,7 +49,7 @@ gulp.task('custom', function() {
 
 // JS
 gulp.task('scripts', function() {
-    return scriptHelper('dev/build/js');
+    return scriptHelper('scripts', 'dev/build/js');
 });
 
 // Clean
@@ -97,7 +98,6 @@ gulp.task('templates', function() {
         .pipe($.size({ title: 'templates' }));
 });
 
-
 // Build styles
 gulp.task('build:css', function() {
     return sassHelper('styles', 'assets/styles/*.sass', 'build/css');
@@ -105,7 +105,7 @@ gulp.task('build:css', function() {
 
 // Build scripts
 gulp.task('build:js', function() {
-    return scriptHelper('build/js');
+    return scriptHelper('scripts', 'build/js');
 });
 
 // Build
