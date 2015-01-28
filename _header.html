@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="<%= css %>">
     <% end %>
     <% end %>
-    <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic' rel='stylesheet'>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./build/css/docs.css">
   </head>
 
@@ -18,6 +19,7 @@
 
       <form class="doc-search-form">
       <input type="search" class="doc-search-keyword">
+      <i class="doc-search-icon fa fa-search"></i>
       </form>
     </nav>
 
@@ -25,23 +27,23 @@
 
       <div class="doc-sidebar">
 
-        <ul class="doc-sidebar-nav">
+        <ul class="doc-sidebar-nav" id="doc-sidebar-nav">
           <% if title === "" %>
-          <li class="active"><a href="./index.html">Home</a></li>
+          <li class="active"><a href="./index.html"><i class="fa fa-cubes"></i> Home</a></li>
           <% else %>
-          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html"><i class="fa fa-cubes"></i>  Home</a></li>
           <% end %>
           <% @categories.sort.each do |category, file_name| %>
           <% if title.downcase === category.downcase %>
-          <li class="active"><a href="<%= file_name %>"><%= category %></a>
+          <li class="active"><a href="<%= file_name %>"><i class="fa fa-cubes"></i> <%= category %></a>
             <ul class="doc-sidebar-subnav">
               <% @blocks.each do |b| %>
-              <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+              <li><a href="#<%= b[:name].downcase %>"><i class="fa fa-cube"></i> <%= b[:title] %></a></li>
               <% end %>
             </ul>
           </li>
           <% else %>
-          <li><a href="<%= file_name %>"><%= category %></a></li>
+          <li><a href="<%= file_name %>"><i class="fa fa-cubes"></i> <%= category %></a></li>
           <% end %>
           <% end %>
         </ul>
