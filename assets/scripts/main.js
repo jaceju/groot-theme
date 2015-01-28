@@ -16,7 +16,7 @@
             $('a[href=#' + $(this).attr('id') + ']').parent('li').removeClass('active');
         });
 
-        $items.scrollSpy({ offsetBottom: 0, offsetBottom: -300 });
+        $items.scrollSpy();
 
     });
 })();
