@@ -2,6 +2,16 @@
 
 > Groot is a basic theme for Trulia's [Hologram](https://github.com/trulia/hologram), the ruby front-end doc generator, and inspired by Yoga's [Cortana](https://github.com/Yago/Cortana).
 
+## Screenshots
+
+Main style:
+
+![](screenshot/main.png)
+
+Search:
+
+![](screenshot/search.png)
+
 ## Usage
 
 To install the last version of **Hologram** (required) :
