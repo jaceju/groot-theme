@@ -12,6 +12,7 @@
   ],
   "ignore": [
     "**/.*",
+    "screenshot",
     ".sass-cache",
     "assets",
     "README.md",
