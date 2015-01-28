@@ -22,19 +22,21 @@ $side-width: 250px
   border-left: 10px solid #eee
 
   & > .doc-sidebar
-    position: relative
+    position: fixed
+    top: 0
+    z-index: 99
     float: left
     width: $side-width
     min-height: 100%
 
     .doc-sidebar-nav
-      width: $side-width - ($content-padding * 3)
+      width: $side-width
 
   & > .doc-content
     position: relative
     float: left
     width: 100%
-    padding: 0 $side-width + $content-padding $content-padding $content-padding
+    padding: 0 $content-padding $content-padding $side-width + $content-padding
     margin-right: -$side-width
 
     & > h1
