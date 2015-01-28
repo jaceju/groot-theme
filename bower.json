@@ -26,7 +26,6 @@
     "gulpfile.js"
   ],
   "devDependencies": {
-    "jquery-scrollspy-thesmart": "~0.1.3"
   },
   "license": "MIT"
 }
