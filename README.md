@@ -12,23 +12,31 @@ Search:
 
 ![](screenshot/search.png)
 
+## Installation
+
+Download directly:
+
+```bash
+curl -L -# http://jaceju.github.io/groot-theme/install.sh | sh
+```
+
+Use Bower:
+
+```bash
+bower install --save-dev groot-theme
+```
+
 ## Usage
 
 To install the last version of **Hologram** (required) :
 
-````
-$ gem install hologram
-````
-
-To install **groot-theme**, use Bower :
-
-````
-$ bower install --save-dev groot-theme
-````
+```bash
+gem install hologram
+```
 
 Your `hologram.yml` should look like :
 
-````yaml
+```yaml
 # The directory containing the source files to parse recursively
 source: ./your-code
 
@@ -57,7 +65,7 @@ css_include:
 js_include:
   - 'http://code.jquery.com/jquery-1.10.2.min.js'
   - '/js/main.js'
-````
+```
 
 We recomand to place a `README.md` in the root of your source directory to build a custom styleguide index page.
 
@@ -67,20 +75,20 @@ To hack **groot-theme**, you will need [RubyGems](http://rubygems.org/), [Bower]
 
 To setup the project:
 
-````bash
-$ bundle install --path=.bundle
-$ npm install
-$ bower install
-````
+```bash
+bundle install --path=.bundle
+npm install
+bower install
+```
 
 Development:
 
-````bash
-$ gulp watch
-````
+```bash
+gulp watch
+```
 
 Build:
 
 ```bash
-$ gulp
+gulp
 ```
