@@ -12,6 +12,7 @@
   ],
   "ignore": [
     "**/.*",
+    "build.sh",
     "screenshot",
     ".sass-cache",
     "assets",
